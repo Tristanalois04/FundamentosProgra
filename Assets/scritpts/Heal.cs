@@ -11,9 +11,9 @@ public class Heal : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            animator.SetTrigger("healanimation");
+            animator.SetTrigger("Healanimation");
 
-        }
+        }   
 
     }
 

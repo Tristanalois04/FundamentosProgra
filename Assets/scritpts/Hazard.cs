@@ -11,7 +11,7 @@ public class Hazard : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            animator.SetTrigger("hazardidle");
+            animator.SetTrigger("hazardanimation");
 
         }
 

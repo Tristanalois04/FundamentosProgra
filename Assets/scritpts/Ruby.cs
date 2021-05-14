@@ -124,8 +124,8 @@ public class Ruby : MonoBehaviour
                 currentHP = 0;
             else
 
-                currentHP -= collision.GetComponent<Hazard>().DamageAmount;
-            animator.SetTrigger("Damageside");
+                currentHP -= collision.GetComponent<enemigo>().damageamount;
+                 animator.SetTrigger("Damageside");
 
         }
 
@@ -139,7 +139,7 @@ public class Ruby : MonoBehaviour
                 currentHP = HP;
             else
                 currentHP += collision.GetComponent<Heal>().PlusHeal;
-                //activar heal particulas
+                animator.SetTrigger("Healanimation");
         }
 
 
