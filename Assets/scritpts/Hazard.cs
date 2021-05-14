@@ -7,13 +7,15 @@ public class Hazard : MonoBehaviour
     public Animator animator;
     public int DamageAmount;
 
-
-    private void OnTriggerEnter2D(Collider Collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Player"))
+        {
+            animator.SetTrigger("hazardidle");
+
+        }
 
     }
 
 
-    
 }

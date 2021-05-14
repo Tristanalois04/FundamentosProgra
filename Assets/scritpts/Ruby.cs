@@ -7,16 +7,19 @@ public class Ruby : MonoBehaviour
 
     public Animator animator;
     public SpriteRenderer ruby;
+    public Rigidbody2D rigidbody;
     [Header("Balance Variable")]
     [SerializeField]
-    private float moveSpeed;
-    [SerializeField]
-    private int currentHP = 30;
-    [SerializeField]
-    private int HP = 30;
+    private float jumpForce = 1;
+    public float moveSpeed;
+    public int currentHP = 30;
+    public int HP = 30;
 
 
 
+    private float horizontal;
+    private float vertical;
+    private Vector3 direction;
 
 
 
@@ -29,30 +32,46 @@ public class Ruby : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // w Up
-        if (Input.GetKey(KeyCode.W)) 
-        {
-            animator.SetBool("RunUp",true);
-            animator.SetBool("RunDown",false);
-            animator.SetBool("RunSide",false);
-            transform.position = new Vector2(transform.position.x,transform.position.y + moveSpeed);
 
-        }
-        // S down
-        if (Input.GetKey(KeyCode.S))
-        {
-            animator.SetBool("RunUp", false);
-            animator.SetBool("RunDown", true);
-            animator.SetBool("RunSide", false);
-            transform.position = new Vector2(transform.position.x, transform.position.y - moveSpeed);
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");
+        direction = new Vector3(horizontal, 0f, vertical);
 
-        }
+       
+        
+        
+        
+
+
+
+        //// w Up
+        //if (Input.GetKey(KeyCode.W)) 
+        //{
+        //    animator.SetBool("RunUp",true);
+        //    animator.SetBool("RunDown",false);
+        //    animator.SetBool("RunSide",false);
+        //    transform.position = new Vector2(transform.position.x,transform.position.y + moveSpeed);
+
+        //}
+        //// S down
+        //if (Input.GetKey(KeyCode.S))
+        //{
+        //    animator.SetBool("RunUp", false);
+        //    animator.SetBool("RunDown", true);
+        //    animator.SetBool("RunSide", false);
+        //    transform.position = new Vector2(transform.position.x, transform.position.y - moveSpeed);
+
+        //}
         // A Left
+
+        
+
+
         if (Input.GetKey(KeyCode.A))
         {
             ruby.flipX = false;
-            animator.SetBool("RunUp", false);
-            animator.SetBool("RunDown", false);
+            //animator.SetBool("RunUp", false);
+            //animator.SetBool("RunDown", false);
             animator.SetBool("RunSide", true);
             transform.position = new Vector2(transform.position.x - moveSpeed, transform.position.y);
 
@@ -61,11 +80,23 @@ public class Ruby : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             ruby.flipX = true;
-            animator.SetBool("RunUp", false);
-            animator.SetBool("RunDown", false);
+            //animator.SetBool("RunUp", false);
+            //animator.SetBool("RunDown", false);
             animator.SetBool("RunSide", true); 
             transform.position = new Vector2(transform.position.x + moveSpeed, transform.position.y);
 
+        }
+
+        if (direction.magnitude == 0f)
+        {
+            animator.SetBool("RunSide", false);
+        }
+
+
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
 
 
@@ -86,7 +117,23 @@ public class Ruby : MonoBehaviour
         
         }
 
-       if(collision.CompareTag("Heal"))
+        if (collision.CompareTag("Enemy"))
+        {
+            if ((currentHP - collision.GetComponent<enemigo>().damageamount) < 0)
+
+                currentHP = 0;
+            else
+
+                currentHP -= collision.GetComponent<Hazard>().DamageAmount;
+            animator.SetTrigger("Damageside");
+
+        }
+
+
+
+
+
+        if (collision.CompareTag("Heal"))
        {
             if ((currentHP += collision.GetComponent<Heal>().PlusHeal) > HP)
                 currentHP = HP;

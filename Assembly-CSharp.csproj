@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4167DE37-7623-7245-7179-B1129516F4B7}</ProjectGuid>
+    <ProjectGuid>{A653496A-B25D-6BEE-9026-CC4E2182FD1E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -66,7 +66,10 @@
   <ItemGroup>
     <Compile Include="Assets\scritpts\Hazard.cs" />
     <Compile Include="Assets\scritpts\Heal.cs" />
+    <Compile Include="Assets\scritpts\HealthBar.cs" />
     <Compile Include="Assets\scritpts\Ruby.cs" />
+    <Compile Include="Assets\scritpts\enemigo.cs" />
+    <Compile Include="Assets\scritpts\plataforma.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/2019.4.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -602,98 +605,98 @@
       <HintPath>D:/2019.4.14f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Path.Editor">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="PsdPlugin">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/juego/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/ESCRITORIO/universidad/4 semestre/progra/repo/FundamentosProgra/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Animation.Samples.Dependency.csproj">
-      <Project>{2E205004-3BBF-B490-023D-FB7F5BFA0C25}</Project>
+      <Project>{F2F0E4A5-CBFA-E7DE-4007-04B89AA4C13F}</Project>
       <Name>Unity.2D.Animation.Samples.Dependency</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Samples.Runtime.csproj">
-      <Project>{10960FEB-8432-C140-0006-774534828377}</Project>
+      <Project>{0D24536A-B0D7-A6C3-8901-A07B5F477296}</Project>
       <Name>Unity.2D.Animation.Samples.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Samples.Editor.csproj">
-      <Project>{DE711B75-3DF4-0858-6B9C-25CB5B4A0626}</Project>
+      <Project>{272B9F92-F379-A3C7-F9B2-3FA1F863FB4D}</Project>
       <Name>Unity.2D.Animation.Samples.Editor</Name>
     </ProjectReference>
   </ItemGroup>
