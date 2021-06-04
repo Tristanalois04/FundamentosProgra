@@ -14,6 +14,7 @@ public class Ruby : MonoBehaviour
     public float moveSpeed;
     public int currentHP = 30;
     public int HP = 30;
+    public float impulso = 2;
 
 
 
@@ -37,37 +38,7 @@ public class Ruby : MonoBehaviour
         vertical = Input.GetAxis("Vertical");
         direction = new Vector3(horizontal, 0f, vertical);
 
-       
-        
-        
-        
-
-
-
-        //// w Up
-        //if (Input.GetKey(KeyCode.W)) 
-        //{
-        //    animator.SetBool("RunUp",true);
-        //    animator.SetBool("RunDown",false);
-        //    animator.SetBool("RunSide",false);
-        //    transform.position = new Vector2(transform.position.x,transform.position.y + moveSpeed);
-
-        //}
-        //// S down
-        //if (Input.GetKey(KeyCode.S))
-        //{
-        //    animator.SetBool("RunUp", false);
-        //    animator.SetBool("RunDown", true);
-        //    animator.SetBool("RunSide", false);
-        //    transform.position = new Vector2(transform.position.x, transform.position.y - moveSpeed);
-
-        //}
-        // A Left
-
-        
-
-
-        if (Input.GetKey(KeyCode.A))
+       if (Input.GetKey(KeyCode.A))
         {
             ruby.flipX = false;
             //animator.SetBool("RunUp", false);
@@ -129,22 +100,28 @@ public class Ruby : MonoBehaviour
 
         }
 
-
-
-
-
-        if (collision.CompareTag("Heal"))
+       if (collision.CompareTag("Heal"))
        {
             if ((currentHP += collision.GetComponent<Heal>().PlusHeal) > HP)
                 currentHP = HP;
             else
                 currentHP += collision.GetComponent<Heal>().PlusHeal;
-                animator.SetTrigger("Healanimation");
-        }
+       }
 
 
 
    }
+      private void OnCollisionEnter2D(Collision2D collision)
+      {
+        if (collision.gameObject.CompareTag("plataformasaltarina"))
+        {
+          
+            rigidbody.AddForce(new Vector2(0f, impulso), ForceMode2D.Impulse);
+        
+        }
+      }
+
+
 
 
 
