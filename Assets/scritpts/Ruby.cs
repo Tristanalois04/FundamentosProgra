@@ -40,7 +40,7 @@ public class Ruby : MonoBehaviour
 
        if (Input.GetKey(KeyCode.A))
         {
-            ruby.flipX = false;
+            ruby.flipX = true;
             //animator.SetBool("RunUp", false);
             //animator.SetBool("RunDown", false);
             animator.SetBool("RunSide", true);
@@ -50,7 +50,7 @@ public class Ruby : MonoBehaviour
         // D Right
         if (Input.GetKey(KeyCode.D))
         {
-            ruby.flipX = true;
+            ruby.flipX = false;
             //animator.SetBool("RunUp", false);
             //animator.SetBool("RunDown", false);
             animator.SetBool("RunSide", true); 
@@ -65,8 +65,9 @@ public class Ruby : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) //down
         {
+            
             rigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
 
