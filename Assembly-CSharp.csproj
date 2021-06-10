@@ -98,10 +98,11 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\scritpts\ChangeColor.cs" />
     <Compile Include="Assets\scritpts\Hazard.cs" />
     <Compile Include="Assets\scritpts\Heal.cs" />
     <Compile Include="Assets\scritpts\HealthBar.cs" />
-    <Compile Include="Assets\scritpts\MovingLamp.cs" />
+    <Compile Include="Assets\scritpts\MovingLight.cs" />
     <Compile Include="Assets\scritpts\ParalaxCamera.cs" />
     <Compile Include="Assets\scritpts\ParalaxController.cs" />
     <Compile Include="Assets\scritpts\ParalaxLayer.cs" />
